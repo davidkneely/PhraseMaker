@@ -6,7 +6,7 @@ import java.awt.Color;
 
 class PhraseMaker extends World {
 
-    // the frog that navigates the game
+    
     String string;
     int i;
 
@@ -26,13 +26,13 @@ class PhraseMaker extends World {
         this.i = 0;
     }
 
-    // contructor for precomposed string
+    // contructor for pre-composed string
     PhraseMaker(String string) {
         this.string = string;
         this.i = 0;
     }
 
-    // The update the scene and move the frog if it is on a log
+    // The update the "graphics"
     public void onTick() {
         this.makeImage();
 
@@ -77,7 +77,7 @@ class PhraseMaker extends World {
             return;
     }
 
-    // produce the image that represents this Frogger game world
+    // produce the image that represents the notes, cursor, and prompt
     public WorldImage makeImage() {
         return this.background.overlayImages(this.stringPrompt(),
                 this.yourString(), this.showNotes(), this.markNote());
